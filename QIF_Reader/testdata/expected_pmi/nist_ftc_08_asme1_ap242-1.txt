@@ -1,0 +1,48 @@
+PMI-DATUM Datum A: A target=0
+PMI-DATUM Datum B: B target=0
+PMI-DATUM Datum C: C target=0
+PMI-DATUM Datum D: D target=0
+PMI-DATUM Datum E: E target=0
+PMI-DATUM Datum F: F target=0
+PMI-DATUM Datum G: G target=0
+PMI-DATUM Datum H: H target=0
+PMI-DATUM Datum J: J target=0
+PMI-DATUM Datum K: K target=0
+PMI-DATUM Datum L: L target=0
+PMI-DIM Hole Dimension (27): type=9 value=0.213 tol=0.005/-0.001 symbol=27
+PMI-DIM Hole Dimension (31): type=9 value=0.25 tol=0.006/-0.001 symbol=27
+PMI-DIM Hole Dimension (37): type=9 value=0.242 tol=0.005/-0.001 symbol=27
+PMI-DIM Hole Dimension (40): type=9 value=0.228 tol=0.005/-0.001 symbol=27
+PMI-DIM Hole Dimension (45): type=9 value=0.228 tol=0.005/-0.001 symbol=27
+PMI-DIM Hole Dimension (49): type=9 value=0.242 tol=0.005/-0.001 symbol=27
+PMI-DIM Hole Dimension (52): type=9 value=0.238 tol=0.005/-0.001 symbol=27
+PMI-DIM Hole Dimension (6): type=9 value=0.238 tol=0.005/-0.001 symbol=27
+PMI-DIM Hole Dimension (8): type=9 value=0.238 tol=0.005/-0.001 symbol=27
+PMI-DIM Perpendicular Dimension (35): type=0 value=1.1 tol=0/0 symbol=0
+PMI-GDT Feature Control Frame (1): type=2 tol=0.03 zone=0 mod=0 datums=
+PMI-GDT Feature Control Frame (11): type=9 tol=0.015 zone=0 mod=0 datums=D
+PMI-GDT Feature Control Frame (12): type=6 tol=0.035 zone=0 mod=0 datums=D,B,C
+PMI-GDT Feature Control Frame (13): type=9 tol=0.03 zone=0 mod=0 datums=A
+PMI-GDT Feature Control Frame (14): type=6 tol=0.06 zone=0 mod=0 datums=A,B,C
+PMI-GDT Feature Control Frame (15): type=6 tol=0.06 zone=0 mod=0 datums=A,B,C
+PMI-GDT Feature Control Frame (2): type=2 tol=0.015 zone=0 mod=0 datums=
+PMI-GDT Feature Control Frame (21): type=2 tol=0.015 zone=0 mod=0 datums=
+PMI-GDT Feature Control Frame (22): type=9 tol=0.015 zone=0 mod=0 datums=A
+PMI-GDT Feature Control Frame (23): type=9 tol=0.03 zone=0 mod=0 datums=A
+PMI-GDT Feature Control Frame (24): type=6 tol=0.05 zone=0 mod=0 datums=A,B,C
+PMI-GDT Feature Control Frame (26): type=6 tol=0.04 zone=0 mod=0 datums=D,E-F
+PMI-GDT Feature Control Frame (28): type=10 tol=0.04 zone=1 mod=1 datums=D,B,C
+PMI-GDT Feature Control Frame (30): type=6 tol=0.04 zone=0 mod=0 datums=D,B,C
+PMI-GDT Feature Control Frame (32): type=10 tol=0.03 zone=1 mod=0 datums=D,B,C
+PMI-GDT Feature Control Frame (34): type=6 tol=0.015 zone=0 mod=0 datums=D,G/1
+PMI-GDT Feature Control Frame (36): type=6 tol=0.015 zone=0 mod=0 datums=D,K/1,L/1
+PMI-GDT Feature Control Frame (38): type=10 tol=0.05 zone=1 mod=1 datums=D,B,C
+PMI-GDT Feature Control Frame (4): type=9 tol=0.02 zone=0 mod=0 datums=D
+PMI-GDT Feature Control Frame (41): type=10 tol=0.05 zone=1 mod=1 datums=D,B,C
+PMI-GDT Feature Control Frame (44): type=6 tol=0.015 zone=0 mod=0 datums=D,H-J/1
+PMI-GDT Feature Control Frame (46): type=10 tol=0.05 zone=1 mod=1 datums=D,B,C
+PMI-GDT Feature Control Frame (5): type=6 tol=0.06 zone=0 mod=0 datums=A,B,C
+PMI-GDT Feature Control Frame (50): type=10 tol=0.05 zone=1 mod=1 datums=D,B,C
+PMI-GDT Feature Control Frame (53): type=8 tol=0.015 zone=1 mod=1 datums=A
+PMI-GDT Feature Control Frame (7): type=10 tol=0.023 zone=1 mod=1 datums=A,B,C
+PMI-GDT Feature Control Frame (9): type=10 tol=0.02 zone=1 mod=1 datums=A,B

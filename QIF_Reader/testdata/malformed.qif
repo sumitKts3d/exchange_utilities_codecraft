@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<QIFDocument xmlns="http://qifstandards.org/xsd/qif3"><Product><GeometrySet>
+<PointSet n="1"><Point id="1"><XYZ>0 0 0</XYZ></Point>
+</GeometrySet></QIFDocument>

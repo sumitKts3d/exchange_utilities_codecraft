@@ -1,0 +1,17 @@
+PMI-DATUM Datum A: A target=0
+PMI-DATUM Datum B: B target=0
+PMI-DATUM Datum C: C target=0
+PMI-DIM Angular Size.1: type=4 value=60 tol=0.5/-0.5 symbol=0
+PMI-DIM Linear Size.1: type=9 value=35 tol=0/-0.2 symbol=27
+PMI-DIM Linear Size.2: type=9 value=35 tol=0.2/0 symbol=27
+PMI-DIM Linear Size.3: type=9 value=20 tol=0.05/-0.1 symbol=27
+PMI-DIM Linear Size.4: type=9 value=20 tol=0.1/-0.05 symbol=27
+PMI-DIM Linear Size.7: type=9 value=35 tol=0.2/-0.2 symbol=27
+PMI-DIM Linear Size.8: type=9 value=35 tol=0.2/-0.2 symbol=27
+PMI-DIM Linear Size.9: type=9 value=25 tol=0.15/-0.15 symbol=27
+PMI-GDT Flatness.1: type=2 tol=0.2 zone=0 mod=0 datums=
+PMI-GDT Perpendicularity.1: type=8 tol=1.5 zone=0 mod=0 datums=A
+PMI-GDT Position surfacic profile.2: type=6 tol=0.5 zone=0 mod=0 datums=A
+PMI-GDT Position surfacic profile.3: type=6 tol=1.25 zone=0 mod=0 datums=A,B,C
+PMI-GDT Position.1: type=10 tol=0.75 zone=0 mod=0 datums=A,B,C
+PMI-GDT Position.2: type=10 tol=0.75 zone=0 mod=0 datums=A,B,C

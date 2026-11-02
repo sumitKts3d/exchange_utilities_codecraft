@@ -1,0 +1,89 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+    upAxis = "Z"
+    metersPerUnit = 1
+)
+
+class Xform "BoltProto"
+{
+    def Cylinder "Shank"
+    {
+        double radius = 0.5
+        double height = 4
+    }
+
+    def Cylinder "Head"
+    {
+        double radius = 1
+        double height = 1
+        double3 xformOp:translate = (0, 0, 2.5)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+    }
+}
+
+class Xform "PlateProto"
+{
+    def Cube "Body"
+    {
+        double size = 10
+        double3 xformOp:translate = (0, 0, -5)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+    }
+
+    def Xform "B1" (
+        instanceable = true
+        references = </BoltProto>
+    )
+    {
+        double3 xformOp:translate = (-3, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+    }
+
+    def Xform "B2" (
+        instanceable = true
+        references = </BoltProto>
+    )
+    {
+        double3 xformOp:translate = (3, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+    }
+}
+
+def Xform "World"
+{
+    def Xform "Bolt1" (
+        instanceable = true
+        references = </BoltProto>
+    )
+    {
+    }
+
+    def Xform "Bolt2" (
+        instanceable = true
+        references = </BoltProto>
+    )
+    {
+        double3 xformOp:translate = (5, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+    }
+
+    def Xform "Bolt3" (
+        instanceable = true
+        references = </BoltProto>
+    )
+    {
+        token visibility = "invisible"
+        double3 xformOp:translate = (10, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+    }
+
+    def Xform "Plate" (
+        instanceable = true
+        references = </PlateProto>
+    )
+    {
+        double3 xformOp:translate = (0, 20, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+    }
+}

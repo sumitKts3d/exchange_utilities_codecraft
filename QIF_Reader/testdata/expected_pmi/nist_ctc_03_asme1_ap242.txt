@@ -1,0 +1,28 @@
+PMI-DATUM Datum A: A target=0
+PMI-DATUM Datum B: B target=0
+PMI-DATUM Datum C: C target=0
+PMI-DATUM Datum D: D target=0
+PMI-DATUM Datum E: E target=0
+PMI-DATUM Datum F: F target=0
+PMI-DIM Linear Size.11: type=0 value=0.75 tol=0/0 symbol=0
+PMI-DIM Linear Size.1: type=9 value=0.438 tol=0.005/-0.005 symbol=27
+PMI-DIM Linear Size.2: type=9 value=0.438 tol=0.005/-0.005 symbol=27
+PMI-DIM Linear Size.3: type=9 value=1.065 tol=0.003/-0.003 symbol=27
+PMI-DIM Linear Size.4: type=9 value=0.625 tol=0.005/-0.005 symbol=27
+PMI-DIM Linear Size.5: type=9 value=0.438 tol=0.005/-0.005 symbol=27
+PMI-DIM Linear Size.6: type=9 value=2 tol=0.01/-0.01 symbol=27
+PMI-DIM Linear Size.7: type=9 value=1.5 tol=0.005/-0.005 symbol=27
+PMI-DIM Linear Size.9: type=0 value=0.82 tol=0.06/-0.06 symbol=0
+PMI-GDT Angularity.1: type=7 tol=0.04 zone=0 mod=0 datums=A
+PMI-GDT Flatness.1: type=2 tol=0 zone=0 mod=0 datums=
+PMI-GDT Perpendicularity.1: type=8 tol=0.01 zone=1 mod=0 datums=A
+PMI-GDT Perpendicularity.2: type=8 tol=0.01 zone=1 mod=0 datums=E
+PMI-GDT Position Surfacic Profile.1: type=6 tol=0.03 zone=0 mod=0 datums=A,B,C
+PMI-GDT Position Surfacic Profile.2: type=6 tol=0.06 zone=0 mod=0 datums=A,B,C
+PMI-GDT Position.1: type=10 tol=0.02 zone=1 mod=0 datums=A,B
+PMI-GDT Position.3: type=10 tol=0.05 zone=1 mod=1 datums=A,B/1,C/1
+PMI-GDT Position.4: type=10 tol=0.05 zone=1 mod=1 datums=D,B,C
+PMI-GDT Position.5: type=10 tol=0.06 zone=1 mod=0 datums=D,B,C
+PMI-GDT Position.6: type=10 tol=0.08 zone=1 mod=0 datums=D,B,C
+PMI-GDT Position.8: type=10 tol=0.03 zone=0 mod=0 datums=D,B,C
+PMI-GDT Profile Tolerance af any Surface.1: type=6 tol=0.01 zone=0 mod=0 datums=

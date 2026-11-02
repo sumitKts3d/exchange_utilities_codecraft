@@ -1,0 +1,23 @@
+# USD_Reader - USD (OpenUSD) to PRC converter on HOOPS Exchange.
+# Built from the top-level CMakeLists.txt of this repository (see ../README.md).
+
+# OpenUSD wiring shared with USD_Writer (OpenUSD folder, imported pxr targets, runtime copy): ../usd_common/OpenUSD.cmake
+include("${CMAKE_CURRENT_SOURCE_DIR}/../usd_common/OpenUSD.cmake")
+
+add_executable(USD_Reader)
+target_include_directories(USD_Reader PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_link_libraries(USD_Reader PRIVATE HOOPSExchangePlugin HOOPSExchangeSampleAppTools)
+hoops_usd_setup(USD_Reader usd usdGeom usdShade sdf tf vt gf)
+set_target_properties(USD_Reader PROPERTIES FOLDER "plugins")
+
+set(_srcs
+    USD_Reader.cpp)
+
+target_sources(USD_Reader PRIVATE ${_srcs})
+
+source_group(TREE "${CMAKE_CURRENT_SOURCE_DIR}" FILES ${_srcs})
+
+# Tests: CTest cases live in tests.cmake (names start with "USD_Reader.").
+# They carry the same labels as the samples' tests (see samples/tests/README.md in HOOPS Exchange).
+set_property(DIRECTORY PROPERTY LABELS "sample;exchange")
+include("${CMAKE_CURRENT_SOURCE_DIR}/tests.cmake")

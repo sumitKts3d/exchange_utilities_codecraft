@@ -1,0 +1,20 @@
+PMI-DATUM Datum A: A target=0
+PMI-DATUM Datum B: B target=0
+PMI-DATUM Datum target C1: C1 target=1
+PMI-DATUM Datum target D1: D1 target=1
+PMI-DIM Horizontal Dimension (35): type=0 value=1.25 tol=0/0 symbol=0
+PMI-DIM Horizontal Dimension (39): type=0 value=1.25 tol=0/0 symbol=0
+PMI-DIM Horizontal Dimension (8): type=0 value=5 tol=0.008/-0.008 symbol=0
+PMI-DIM Vertical Dimension (28): type=9 value=10 tol=0.001/-0.001 symbol=27
+PMI-DIM Vertical Dimension (37): type=0 value=2 tol=0/0 symbol=0
+PMI-DIM Vertical Dimension (41): type=2 value=2 tol=0/0 symbol=0
+PMI-GDT Feature Control Frame (10): type=11 tol=0.03 zone=1 mod=0 datums=A
+PMI-GDT Feature Control Frame (11): type=1 tol=0.005 zone=0 mod=0 datums=
+PMI-GDT Feature Control Frame (20): type=8 tol=0.01 zone=0 mod=0 datums=C
+PMI-GDT Feature Control Frame (27): type=8 tol=0.01 zone=0 mod=0 datums=D
+PMI-GDT Feature Control Frame (32): type=13 tol=0.035 zone=0 mod=0 datums=
+PMI-GDT Feature Control Frame (4): type=14 tol=0.002 zone=0 mod=0 datums=A
+PMI-GDT Feature Control Frame (44): type=13 tol=0.025 zone=0 mod=0 datums=
+PMI-GDT Feature Control Frame (45): type=13 tol=0.025 zone=0 mod=0 datums=
+PMI-GDT Feature Control Frame (5): type=14 tol=0.015 zone=0 mod=0 datums=B
+PMI-GDT Feature Control Frame (9): type=3 tol=0.002 zone=0 mod=0 datums=
