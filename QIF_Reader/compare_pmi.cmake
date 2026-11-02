@@ -1,0 +1,25 @@
+# Runs QIF_Reader --dump-pmi on one QIF file and compares the semantic PMI read back from the written PRC
+# with the expectation computed independently from the QIF XML (testdata/expected_pmi, gen_expected_pmi.py).
+# Usage: cmake -DEXE=<QIF_Reader> -DIN=<file.qif> -DOUT=<file.prc> -DEXPECTED=<expected.txt> -P compare_pmi.cmake
+execute_process(COMMAND "${EXE}" "${IN}" "${OUT}" --force --quiet --dump-pmi
+                OUTPUT_VARIABLE out ERROR_VARIABLE err RESULT_VARIABLE rc)
+if(NOT rc EQUAL 0)
+    message(FATAL_ERROR "QIF_Reader exited with ${rc}\n${out}\n${err}")
+endif()
+string(REGEX MATCHALL "PMI-(GDT|DIM|DATUM) [^\n]*" got "${out}")
+list(SORT got)
+file(STRINGS "${EXPECTED}" want ENCODING UTF-8)
+list(SORT want)
+list(LENGTH got ngot)
+list(LENGTH want nwant)
+set(missing "")
+foreach(l IN LISTS want)
+    list(FIND got "${l}" i)
+    if(i EQUAL -1)
+        string(APPEND missing "  expected: ${l}\n")
+    endif()
+endforeach()
+if(NOT ngot EQUAL nwant OR NOT missing STREQUAL "")
+    message(FATAL_ERROR "semantic PMI differs: ${ngot} read back, ${nwant} expected\n${missing}")
+endif()
+message(STATUS "semantic PMI identical: ${ngot} GD&T / dimension / datum markups")

@@ -1,0 +1,30 @@
+# Build output
+build/
+_build/
+out/
+cmake-build-*/
+CMakeUserPresets.json
+x64/
+Debug/
+Release/
+
+# Binaries and runtime files (the SDKs are referenced, never copied)
+*.exe
+*.dll
+*.lib
+*.pdb
+*.obj
+*.ilk
+*.exp
+*.tlog
+
+# Test output
+test_out/
+
+# IDE and tools
+.vs/
+.vscode/
+*.user
+*.suo
+__pycache__/
+node_modules/

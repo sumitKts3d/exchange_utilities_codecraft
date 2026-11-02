@@ -1,0 +1,61 @@
+PMI-DATUM Datum A: A target=0
+PMI-DATUM Datum B: B target=0
+PMI-DATUM Datum C: C target=0
+PMI-DATUM Datum D: D target=0
+PMI-DATUM Datum E: E target=0
+PMI-DATUM Datum F: F target=0
+PMI-DATUM Datum G: G target=0
+PMI-DATUM Datum H: H target=0
+PMI-DIM Dimension.6: type=0 value=0.15625 tol=0/0 symbol=0
+PMI-DIM Dimension.7: type=9 value=0.156 tol=0/0 symbol=27
+PMI-DIM Linear Size.10: type=9 value=0.25 tol=0.008/-0.008 symbol=27
+PMI-DIM Linear Size.11: type=9 value=0.375 tol=0.008/-0.008 symbol=27
+PMI-DIM Linear Size.12: type=0 value=0.14 tol=0.008/-0.008 symbol=0
+PMI-DIM Linear Size.13: type=9 value=0.156 tol=0.008/-0.008 symbol=27
+PMI-DIM Linear Size.16: type=9 value=0.315 tol=0.008/-0.008 symbol=27
+PMI-DIM Linear Size.17: type=9 value=0.281 tol=0.008/-0.008 symbol=27
+PMI-DIM Linear Size.19: type=9 value=0.156 tol=0.008/-0.008 symbol=27
+PMI-DIM Linear Size.20: type=9 value=0.75 tol=0.008/-0.008 symbol=27
+PMI-DIM Linear Size.21: type=9 value=0.221 tol=0.008/-0.008 symbol=27
+PMI-DIM Linear Size.22: type=9 value=0.156 tol=0.008/-0.008 symbol=27
+PMI-DIM Linear Size.24: type=9 value=0.156 tol=0/0 symbol=27
+PMI-DIM Linear Size.27: type=9 value=0.25 tol=0.003/0 symbol=27
+PMI-DIM Linear Size.28: type=9 value=0.25 tol=0.003/0 symbol=27
+PMI-DIM Linear Size.29: type=0 value=0.375 tol=0.008/-0.008 symbol=0
+PMI-DIM Linear Size.2: type=9 value=0.234 tol=0.008/-0.008 symbol=27
+PMI-DIM Linear Size.30: type=2 value=1.5 tol=0.012/-0.012 symbol=0
+PMI-DIM Linear Size.31: type=9 value=0.156 tol=0/0 symbol=27
+PMI-DIM Linear Size.33: type=0 value=0.25 tol=0.01/-0.01 symbol=0
+PMI-DIM Linear Size.34: type=2 value=1 tol=0.02/-0.02 symbol=0
+PMI-DIM Linear Size.36: type=9 value=0.281 tol=0/0 symbol=27
+PMI-DIM Linear Size.3: type=9 value=0.234 tol=0.008/-0.008 symbol=27
+PMI-DIM Linear Size.5: type=9 value=0.234 tol=0.008/-0.008 symbol=27
+PMI-GDT Datum Reference Frame.3: type=8 tol=0.01 zone=1 mod=0 datums=A
+PMI-GDT Datum Reference Frame.4: type=10 tol=0.06 zone=0 mod=1 datums=A,B,C
+PMI-GDT Flatness.1: type=2 tol=0.01 zone=0 mod=0 datums=
+PMI-GDT Perpendicularity.1: type=8 tol=0.016 zone=1 mod=0 datums=A
+PMI-GDT Perpendicularity.2: type=8 tol=0.01 zone=1 mod=0 datums=A
+PMI-GDT Perpendicularity.3: type=8 tol=0.01 zone=1 mod=0 datums=A
+PMI-GDT Position Surfacic Profile.2: type=6 tol=0.02 zone=0 mod=0 datums=A,F/1
+PMI-GDT Position Surfacic Profile.3: type=6 tol=0.05 zone=0 mod=0 datums=A,B,C
+PMI-GDT Position Surfacic Profile.5: type=6 tol=0.008 zone=0 mod=0 datums=A,G,H
+PMI-GDT Position.13: type=10 tol=0.03 zone=1 mod=0 datums=A,B,C
+PMI-GDT Position.14: type=10 tol=0.04 zone=1 mod=0 datums=A,B,C
+PMI-GDT Position.15: type=10 tol=0.01 zone=0 mod=0 datums=A,G,B
+PMI-GDT Position.1: type=10 tol=0.016 zone=1 mod=0 datums=A,B
+PMI-GDT Position.20: type=10 tol=0.02 zone=1 mod=0 datums=A,D,B
+PMI-GDT Position.21: type=10 tol=0.025 zone=1 mod=1 datums=A,D/1,E/1
+PMI-GDT Position.22: type=10 tol=0.025 zone=1 mod=1 datums=A,D/1,E/1
+PMI-GDT Position.24: type=10 tol=0.01 zone=0 mod=0 datums=A,G,H
+PMI-GDT Position.25: type=10 tol=0.01 zone=0 mod=0 datums=A,G,H
+PMI-GDT Position.29: type=10 tol=0.05 zone=1 mod=0 datums=A,B,C
+PMI-GDT Position.31: type=10 tol=0.03 zone=0 mod=1 datums=A,B,C
+PMI-GDT Position.32: type=10 tol=0.01 zone=0 mod=0 datums=A,G,H
+PMI-GDT Position.36: type=10 tol=0.03 zone=1 mod=0 datums=A,B,C
+PMI-GDT Position.37: type=10 tol=0.03 zone=0 mod=0 datums=A,G,H
+PMI-GDT Position.37: type=10 tol=0.05 zone=1 mod=0 datums=A,B,C
+PMI-GDT Position.38: type=10 tol=0.05 zone=1 mod=0 datums=A,B,C
+PMI-GDT Position.39: type=10 tol=0.02 zone=0 mod=1 datums=A,B,C
+PMI-GDT Position.40: type=10 tol=0.02 zone=0 mod=0 datums=A,B,C
+PMI-GDT Position.41: type=10 tol=0.06 zone=0 mod=0 datums=A,B,C
+PMI-GDT Position.5: type=10 tol=0.016 zone=1 mod=1 datums=A,B,C

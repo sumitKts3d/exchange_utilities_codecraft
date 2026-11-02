@@ -1,0 +1,143 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+    upAxis = "Z"
+    metersPerUnit = 1
+)
+
+def Xform "World"
+{
+    # Two quads: the mesh is bound to Steel, face 1 (GeomSubset) to a half-transparent Red.
+    def Mesh "Sheet" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        point3f[] points = [(0, 0, 0), (1, 0, 0), (1, 1, 0), (0, 1, 0), (2, 0, 0), (2, 1, 0)]
+        int[] faceVertexCounts = [4, 4]
+        int[] faceVertexIndices = [0, 1, 2, 3, 1, 4, 5, 2]
+        uniform token subdivisionScheme = "none"
+        rel material:binding = </World/Looks/Steel>
+        uniform token subsetFamily:materialBind:familyType = "nonOverlapping"
+
+        def GeomSubset "RedFace" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            uniform token elementType = "face"
+            uniform token familyName = "materialBind"
+            int[] indices = [1]
+            rel material:binding = </World/Looks/Red>
+        }
+    }
+
+    # Material whose diffuse reads displayColor through a primvar reader.
+    def Sphere "Ball" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        double radius = 1
+        double3 xformOp:translate = (5, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+        color3f[] primvars:displayColor = [(0, 1, 0)]
+        rel material:binding = </World/Looks/FromDisplayColor>
+    }
+
+    # Material whose diffuse is a texture: the texture's fallback colour is used.
+    def Cube "Textured" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        double size = 1
+        double3 xformOp:translate = (10, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+        rel material:binding = </World/Looks/Textured>
+    }
+
+    # MaterialX standard_surface.
+    def Cube "Mtlx" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        double size = 1
+        double3 xformOp:translate = (15, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+        rel material:binding = </World/Looks/Gold>
+    }
+
+    def Scope "Looks"
+    {
+        def Material "Steel"
+        {
+            token outputs:surface.connect = </World/Looks/Steel/Surface.outputs:surface>
+            def Shader "Surface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.5, 0.5, 0.5)
+                float inputs:metallic = 1
+                float inputs:roughness = 0.3
+                token outputs:surface
+            }
+        }
+
+        def Material "Red"
+        {
+            token outputs:surface.connect = </World/Looks/Red/Surface.outputs:surface>
+            def Shader "Surface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (1, 0, 0)
+                float inputs:opacity = 0.5
+                token outputs:surface
+            }
+        }
+
+        def Material "FromDisplayColor"
+        {
+            token outputs:surface.connect = </World/Looks/FromDisplayColor/Surface.outputs:surface>
+            def Shader "Surface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor.connect = </World/Looks/FromDisplayColor/Reader.outputs:result>
+                token outputs:surface
+            }
+            def Shader "Reader"
+            {
+                uniform token info:id = "UsdPrimvarReader_float3"
+                string inputs:varname = "displayColor"
+                float3 inputs:fallback = (0.18, 0.18, 0.18)
+                float3 outputs:result
+            }
+        }
+
+        def Material "Textured"
+        {
+            token outputs:surface.connect = </World/Looks/Textured/Surface.outputs:surface>
+            def Shader "Surface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor.connect = </World/Looks/Textured/Image.outputs:rgb>
+                token outputs:surface
+            }
+            def Shader "Image"
+            {
+                uniform token info:id = "UsdUVTexture"
+                asset inputs:file = @missing_texture.png@
+                float4 inputs:fallback = (0, 0, 1, 1)
+                float3 outputs:rgb
+            }
+        }
+
+        def Material "Gold"
+        {
+            token outputs:mtlx:surface.connect = </World/Looks/Gold/SR.outputs:out>
+            def Shader "SR"
+            {
+                uniform token info:id = "ND_standard_surface_surfaceshader"
+                color3f inputs:base_color = (1, 1, 0)
+                float inputs:base = 1
+                float inputs:metalness = 1
+                token outputs:out
+            }
+        }
+    }
+}
